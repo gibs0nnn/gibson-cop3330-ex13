@@ -16,15 +16,14 @@ public class App
         //Take inputs
         System.out.print("What is the principal amount: ");
         double principal = scanner.nextDouble();
-        System.out.print("What is the rate as a percentage: ");
+        System.out.print("What is the rate of interest as a percentage: ");
         double rate = scanner.nextDouble();
         System.out.print("What is the number of years: ");
         int years = scanner.nextInt();
         System.out.print("What is the number of times the interest is compounded per year: ");
         int comPerYear = scanner.nextInt();
 
-        //Compute
-        //Create the compound interest formula
+        //Evaluation
         double ratePercent = rate / 100;
         double amount = Math.round(principal * Math.pow(1 + (ratePercent / comPerYear)
                 , comPerYear * years) * 100.0) / 100.0;
